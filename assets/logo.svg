@@ -1,0 +1,28 @@
+<svg width="320" height="72" viewBox="0 0 320 72" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Aerial Surveying logo">
+  <defs>
+    <linearGradient id="droneG" x1="6" y1="10" x2="60" y2="62" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#19c3f5"/><stop offset="1" stop-color="#0aa6d6"/>
+    </linearGradient>
+  </defs>
+  <!-- drone mark -->
+  <g stroke="url(#droneG)" stroke-width="3" stroke-linecap="round" fill="none">
+    <!-- arms -->
+    <line x1="33" y1="36" x2="14" y2="18"/>
+    <line x1="33" y1="36" x2="52" y2="18"/>
+    <line x1="33" y1="36" x2="14" y2="54"/>
+    <line x1="33" y1="36" x2="52" y2="54"/>
+    <!-- rotors -->
+    <ellipse cx="14" cy="18" rx="9" ry="3.4"/>
+    <ellipse cx="52" cy="18" rx="9" ry="3.4"/>
+    <ellipse cx="14" cy="54" rx="9" ry="3.4"/>
+    <ellipse cx="52" cy="54" rx="9" ry="3.4"/>
+  </g>
+  <!-- body -->
+  <rect x="25" y="28" width="16" height="16" rx="5" fill="url(#droneG)"/>
+  <circle cx="33" cy="36" r="3" fill="#081627"/>
+  <!-- signal beam -->
+  <path d="M33 50 L27 64 H39 Z" fill="#19c3f5" opacity="0.25"/>
+  <!-- wordmark -->
+  <text x="74" y="33" font-family="'Space Grotesk',sans-serif" font-size="25" font-weight="700" letter-spacing="-0.5" fill="#0a1626">Aerial<tspan fill="#0aa6d6">Surveying</tspan></text>
+  <text x="75" y="52" font-family="Inter,sans-serif" font-size="9.5" font-weight="500" letter-spacing="3.5" fill="#8294a8">DRONE SURVEYS &amp; INSPECTIONS</text>
+</svg>

@@ -1,0 +1,18 @@
+# Netlify configuration for Aerial Surveying
+# Static site — no build step required.
+
+[build]
+  publish = "."
+
+# Send any unknown path to the home page (optional, keeps things tidy)
+[[redirects]]
+  from = "/home"
+  to = "/index.html"
+  status = 301
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
