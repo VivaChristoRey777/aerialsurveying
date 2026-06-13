@@ -68,7 +68,9 @@
       <div class="form-card">
         <h2 style="margin-bottom:6px;font-size:1.5rem">Send a message</h2>
         <p style="margin-bottom:24px;font-size:.95rem">Tell us a little about what you need and we'll come straight back to you.</p>
-        <form data-form novalidate>
+        <form data-form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" novalidate>
+          <input type="hidden" name="form-name" value="contact">
+          <p hidden><label>Leave this empty: <input name="bot-field"></label></p>
           <div class="form-grid">
             <div class="field"><label for="cname">Name <span class="req">*</span></label><input id="cname" name="name" type="text" required placeholder="Your name"></div>
             <div class="field"><label for="cphone">Phone <span class="req">*</span></label><input id="cphone" name="phone" type="tel" required placeholder="08X XXX XXXX"></div>

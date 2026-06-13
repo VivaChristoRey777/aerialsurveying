@@ -45,7 +45,9 @@
     reveals.forEach(function (el) { el.classList.add('in'); });
   }
 
-  // ---- Booking / contact form (front-end demo handler) ----
+  // ---- Booking / contact forms ----
+  // Submits to Netlify Forms when live; falls back to an inline success
+  // message anywhere else (e.g. opening the file locally).
   document.querySelectorAll('form[data-form]').forEach(function (form) {
     form.addEventListener('submit', function (ev) {
       ev.preventDefault();
@@ -53,11 +55,23 @@
         form.reportValidity();
         return;
       }
-      var success = form.parentElement.querySelector('.form-success');
-      if (success) {
-        form.style.display = 'none';
-        success.classList.add('show');
-        success.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      var showSuccess = function () {
+        var success = form.parentElement.querySelector('.form-success');
+        if (success) {
+          form.style.display = 'none';
+          success.classList.add('show');
+          success.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+      };
+      if (form.getAttribute('data-netlify') === 'true') {
+        var body = new URLSearchParams(new FormData(form)).toString();
+        fetch('/', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body: body
+        }).then(showSuccess).catch(showSuccess);
+      } else {
+        showSuccess();
       }
     });
   });
