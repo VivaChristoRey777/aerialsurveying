@@ -16,3 +16,6 @@
 
 # Netlify
 .netlify/
+
+# Netlify CLI deploy artifacts
+deploy-*.zip
