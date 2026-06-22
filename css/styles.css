@@ -97,11 +97,11 @@ p{color:var(--slate)}
   border-bottom:1px solid var(--line);
 }
 .nav{display:flex;align-items:center;justify-content:space-between;height:74px}
-.brand{display:flex;align-items:center;gap:11px}
-.brand .logo{height:38px;width:auto}
-.brand-text{font-family:var(--font-head);font-weight:700;font-size:1.18rem;color:var(--ink);letter-spacing:-.02em;line-height:1}
+.brand{display:flex;align-items:center;gap:10px}
+.brand .logo{height:36px;width:auto;flex-shrink:0}
+.brand-text{font-family:var(--font-head);font-weight:700;font-size:1.18rem;color:var(--ink);letter-spacing:-.02em;line-height:1.15}
 .brand-text span{color:var(--accent-dark)}
-.brand-sub{display:block;font-family:var(--font-body);font-weight:500;font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;color:var(--slate-light)}
+.brand-sub{display:block;font-family:var(--font-body);font-weight:500;font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:var(--slate-light);margin-top:3px}
 .nav-links{display:flex;align-items:center;gap:30px;list-style:none}
 .nav-links a{font-weight:500;font-size:.96rem;color:var(--navy-700);position:relative;padding:4px 0}
 .nav-links a::after{content:"";position:absolute;left:0;bottom:-2px;width:0;height:2px;background:var(--accent);transition:width .25s}
@@ -368,9 +368,9 @@ p{color:var(--slate)}
 /* ===========================================================
    FLOATING WHATSAPP
    =========================================================== */
-.wa-float{position:fixed;right:22px;bottom:22px;z-index:90;width:58px;height:58px;border-radius:50%;background:#25D366;display:grid;place-items:center;box-shadow:0 12px 30px -6px rgba(37,211,102,.6);transition:transform .2s}
-.wa-float:hover{transform:scale(1.08)}
-.wa-float svg{width:30px;height:30px;color:#fff}
+.wa-float{position:fixed;right:24px;bottom:24px;z-index:999;width:56px;height:56px;border-radius:50%;background:#25D366;display:grid;place-items:center;box-shadow:0 8px 24px -4px rgba(37,211,102,.5);transition:transform .2s,box-shadow .2s}
+.wa-float:hover{transform:scale(1.1);box-shadow:0 12px 32px -4px rgba(37,211,102,.65)}
+.wa-float svg{width:28px;height:28px;color:#fff}
 
 /* ===========================================================
    RESPONSIVE
@@ -405,3 +405,62 @@ p{color:var(--slate)}
 /* reveal on scroll */
 .reveal{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease}
 .reveal.in{opacity:1;transform:none}
+
+/* gallery photo tiles (buttons) + lightbox */
+button.gtile{border:0;margin:0;padding:0;font:inherit;color:inherit;text-align:left;width:100%;display:block;-webkit-appearance:none;appearance:none;background:var(--navy-700)}
+a.gtile{display:block;text-decoration:none;color:inherit}
+.gtile img.gscene{width:100%;height:100%;object-fit:cover;display:block;border:0;z-index:1}
+.gtile .gscene-bg{z-index:0}
+.gtile .cap{z-index:2}
+.gtile:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+
+.lightbox{position:fixed;inset:0;z-index:1000;display:none;align-items:center;justify-content:center;padding:24px;background:rgba(6,16,28,.93);backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px)}
+.lightbox.open{display:flex}
+.lightbox figure{margin:0;max-width:min(1500px,94vw);max-height:92vh;display:flex;flex-direction:column;gap:12px;animation:lbpop .25s ease}
+@keyframes lbpop{from{opacity:0;transform:scale(.97)}to{opacity:1;transform:none}}
+.lightbox img{max-width:100%;max-height:82vh;width:auto;height:auto;object-fit:contain;border-radius:10px;box-shadow:0 30px 80px rgba(0,0,0,.6)}
+.lightbox figcaption{color:#eaf2fb;text-align:center;font-family:var(--font-head);font-size:1.02rem}
+.lightbox figcaption span{display:block;font-family:var(--font-body);font-size:.85rem;color:#9fb3c8;margin-top:3px}
+.lb-close{position:absolute;top:16px;right:18px;width:44px;height:44px;border-radius:50%;border:0;cursor:pointer;background:rgba(255,255,255,.12);color:#fff;font-size:1.6rem;line-height:1;display:flex;align-items:center;justify-content:center;transition:background .2s}
+.lb-close:hover{background:rgba(255,255,255,.24)}
+.lb-nav{position:absolute;top:50%;transform:translateY(-50%);width:50px;height:50px;border-radius:50%;border:0;cursor:pointer;background:rgba(255,255,255,.12);color:#fff;font-size:1.9rem;line-height:1;display:flex;align-items:center;justify-content:center;transition:background .2s;z-index:2}
+.lb-nav:hover{background:var(--accent);color:var(--navy-900)}
+.lb-prev{left:18px}
+.lb-next{right:18px}
+.lb-count{position:absolute;bottom:18px;left:50%;transform:translateX(-50%);color:#cfe0ef;font-family:var(--font-head);font-size:.82rem;background:rgba(255,255,255,.1);padding:4px 12px;border-radius:999px}
+.lightbox.single .lb-nav,.lightbox.single .lb-count{display:none}
+
+/* count badge on grouped gallery tiles */
+.gtile .tile-count{position:absolute;top:12px;right:12px;z-index:2;background:rgba(8,22,39,.6);color:#fff;font-family:var(--font-head);font-size:.78rem;font-weight:600;letter-spacing:.01em;padding:5px 11px;border-radius:999px;backdrop-filter:blur(3px);-webkit-backdrop-filter:blur(3px)}
+
+/* progress slideshow (single tile) */
+.slideshow{position:relative;border-radius:var(--radius);overflow:hidden;background:var(--navy-700);box-shadow:var(--shadow-sm);max-width:980px}
+.slideshow .slides{position:relative;aspect-ratio:16/9}
+.slideshow .slide{position:absolute;inset:0;margin:0;opacity:0;visibility:hidden;transition:opacity .55s ease}
+.slideshow .slide.is-active{opacity:1;visibility:visible}
+.slideshow .slide img{width:100%;height:100%;object-fit:cover;display:block}
+.slideshow .slide figcaption{position:absolute;left:0;right:0;bottom:0;padding:48px 22px 20px;background:linear-gradient(transparent,rgba(8,22,39,.9));color:#fff}
+.slideshow .slide figcaption b{font-family:var(--font-head);font-size:1.1rem;display:block}
+.slideshow .slide figcaption span{font-size:.85rem;color:#bcd0e2}
+.slide-nav{position:absolute;top:50%;transform:translateY(-50%);width:48px;height:48px;border-radius:50%;border:0;cursor:pointer;background:rgba(8,22,39,.45);color:#fff;font-size:1.7rem;line-height:1;display:flex;align-items:center;justify-content:center;transition:background .2s;z-index:3}
+.slide-nav:hover{background:var(--accent);color:var(--navy-900)}
+.slide-nav:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.slide-nav.prev{left:16px}
+.slide-nav.next{right:16px}
+.slide-count{position:absolute;top:14px;right:16px;z-index:3;background:rgba(8,22,39,.55);color:#fff;font-size:.78rem;font-family:var(--font-head);padding:4px 11px;border-radius:999px}
+.slide-dots{display:flex;gap:9px;justify-content:center;padding:16px;background:var(--navy-800)}
+.slide-dots button{width:9px;height:9px;border-radius:50%;border:0;padding:0;cursor:pointer;background:rgba(255,255,255,.4);transition:background .25s,width .25s}
+.slide-dots button:hover{background:rgba(255,255,255,.7)}
+.slide-dots button.active{background:var(--accent);width:24px;border-radius:5px}
+@media (max-width:560px){.slideshow .slides{aspect-ratio:4/3}.slide-nav{width:40px;height:40px;font-size:1.4rem}}
+
+/* showreel video */
+.video-frame{position:relative;max-width:960px;margin:0 auto;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);background:#000;aspect-ratio:16/10}
+.video-frame video,.video-frame iframe{position:absolute;inset:0;width:100%;height:100%;display:block;border:0;object-fit:cover;background:#000}
+.video-frame .video-poster{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.video-play{position:absolute;inset:0;margin:auto;width:84px;height:84px;border-radius:50%;border:0;cursor:pointer;background:rgba(8,22,39,.55);color:#fff;display:flex;align-items:center;justify-content:center;transition:background .2s,transform .2s;-webkit-backdrop-filter:blur(2px);backdrop-filter:blur(2px)}
+.video-play:hover{background:var(--accent);color:var(--navy-900);transform:scale(1.06)}
+.video-play:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.video-play svg{width:34px;height:34px;margin-left:5px}
+.video-frame.playing .video-play,.video-frame.playing .video-poster{display:none}
+@media (max-width:560px){.video-play{width:64px;height:64px}.video-play svg{width:26px;height:26px}}

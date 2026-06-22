@@ -1,0 +1,158 @@
+<svg viewBox="0 0 1000 750" xmlns="http://www.w3.org/2000/svg" font-family="'Space Grotesk','Inter','Segoe UI',Arial,sans-serif" role="img" aria-labelledby="ot od">
+<title id="ot">Aerial Surveying — UAV orthomosaic with CAD survey overlay</title>
+<desc id="od">A stylised top-down drone aerial of a commercial building and site, with a glowing cyan engineering overlay imposed on top: building footprint, measurement grid, dimensions in metres, survey control points, roof area calculation, flagged roof defects, north arrow and scale bar, framed by a heads-up display.</desc>
+<defs>
+  <filter id="glow" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="2.4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  <filter id="grain"><feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" stitchTiles="stitch" result="n"/><feColorMatrix in="n" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.6 0"/></filter>
+  <pattern id="pv" width="22" height="15" patternUnits="userSpaceOnUse"><rect width="22" height="15" fill="#1b2c3b"/><rect x="1" y="1" width="20" height="13" fill="#243b4f" stroke="#0e1a24" stroke-width="0.8"/><line x1="11" y1="1" x2="11" y2="14" stroke="#0e1a24" stroke-width="0.5"/></pattern>
+  <pattern id="seam" width="20" height="20" patternUnits="userSpaceOnUse"><line x1="0" y1="0" x2="0" y2="20" stroke="#5d6163" stroke-width="0.8"/></pattern>
+  <pattern id="bay" width="34" height="60" patternUnits="userSpaceOnUse"><line x1="0" y1="0" x2="0" y2="60" stroke="#9a9c94" stroke-width="1.4" stroke-opacity="0.55"/></pattern>
+  <pattern id="meas" width="50" height="50" patternUnits="userSpaceOnUse"><path d="M50 0 H0 V50" fill="none" stroke="#19c3f5" stroke-width="0.7"/></pattern>
+</defs>
+
+<!-- ===================== AERIAL BASE ===================== -->
+<rect x="0" y="0" width="1000" height="750" fill="#3a3d36"/>
+<!-- grass / vegetation patches -->
+<rect x="0" y="40" width="1000" height="150" fill="#49512e"/>
+<rect x="0" y="40" width="150" height="600" fill="#49512e"/>
+<polygon points="0,560 250,560 200,690 0,690" fill="#414a29"/>
+<!-- service road bottom -->
+<rect x="0" y="636" width="1000" height="70" fill="#2b2d2f"/>
+<line x1="0" y1="671" x2="1000" y2="671" stroke="#7c7e6e" stroke-width="2.5" stroke-dasharray="26 22" stroke-opacity="0.7"/>
+<rect x="0" y="706" width="1000" height="44" fill="#434b2b"/>
+<!-- car park (right) -->
+<rect x="664" y="206" width="300" height="372" fill="#313338"/>
+<rect x="664" y="206" width="300" height="372" fill="url(#bay)"/>
+<line x1="664" y1="392" x2="964" y2="392" stroke="#9a9c94" stroke-width="1.4" stroke-opacity="0.5"/>
+<!-- a few parked cars -->
+<g opacity="0.92"><rect x="676" y="214" width="20" height="34" rx="3" fill="#b7bcc0"/><rect x="710" y="214" width="20" height="34" rx="3" fill="#7d8388"/><rect x="744" y="214" width="20" height="34" rx="3" fill="#9aa0a4"/><rect x="676" y="400" width="20" height="34" rx="3" fill="#8b9094"/><rect x="744" y="400" width="20" height="34" rx="3" fill="#c2c7cb"/><rect x="900" y="214" width="20" height="34" rx="3" fill="#6f7479"/></g>
+<!-- access path -->
+<path d="M150 560 L160 540 L620 540 L630 560 Z" fill="#5a5d56"/>
+<path d="M620 540 L664 392" stroke="#5a5d56" stroke-width="14" fill="none"/>
+
+<!-- main building roof -->
+<rect x="160" y="200" width="460" height="340" fill="#6b6f70"/>
+<rect x="160" y="200" width="460" height="340" fill="url(#seam)" opacity="0.5"/>
+<!-- weathering tonal patches -->
+<rect x="160" y="200" width="230" height="170" fill="#73777a" opacity="0.5"/>
+<rect x="390" y="370" width="230" height="170" fill="#62666a" opacity="0.45"/>
+<rect x="300" y="440" width="150" height="80" fill="#5b6266" opacity="0.6"/>
+<!-- ponding (standing water) defect -->
+<ellipse cx="360" cy="470" rx="52" ry="26" fill="#3f4a52" opacity="0.8"/>
+<ellipse cx="360" cy="470" rx="34" ry="15" fill="#33424c" opacity="0.85"/>
+<!-- solar array on roof -->
+<rect x="190" y="232" width="176" height="96" fill="url(#pv)" stroke="#0e1a24" stroke-width="1.4"/>
+<!-- rooftop HVAC units -->
+<g><rect x="468" y="250" width="40" height="34" fill="#9aa0a3"/><rect x="468" y="250" width="40" height="34" fill="none" stroke="#3c3f41" stroke-width="1"/><circle cx="488" cy="267" r="11" fill="#7e8488" stroke="#4a4e50"/>
+<rect x="516" y="250" width="40" height="34" fill="#9aa0a3"/><circle cx="536" cy="267" r="11" fill="#7e8488" stroke="#4a4e50"/>
+<rect x="468" y="296" width="40" height="34" fill="#9aa0a3"/><circle cx="488" cy="313" r="11" fill="#7e8488" stroke="#4a4e50"/>
+<rect x="516" y="296" width="40" height="34" fill="#9aa0a3"/><circle cx="536" cy="313" r="11" fill="#7e8488" stroke="#4a4e50"/></g>
+<!-- skylights -->
+<g fill="#aeb9bf" stroke="#4a4e50" stroke-width="1"><rect x="430" y="430" width="26" height="26"/><rect x="466" y="430" width="26" height="26"/><rect x="502" y="430" width="26" height="26"/></g>
+<!-- roof drains -->
+<g fill="#2f3133"><circle cx="200" cy="500" r="5"/><circle cx="580" cy="232" r="5"/><circle cx="580" cy="500" r="5"/></g>
+<!-- small secondary outbuilding -->
+<rect x="40" y="240" width="86" height="70" fill="#5f6362"/><rect x="40" y="240" width="86" height="70" fill="url(#seam)" opacity="0.4"/>
+<!-- trees -->
+<g><circle cx="70" cy="430" r="20" fill="#33431e"/><circle cx="64" cy="424" r="9" fill="#46591f" opacity="0.8"/>
+<circle cx="110" cy="470" r="16" fill="#2f3d1c"/><circle cx="700" cy="120" r="18" fill="#33431e"/><circle cx="760" cy="135" r="14" fill="#2f3d1c"/><circle cx="60" cy="120" r="17" fill="#33431e"/><circle cx="930" cy="120" r="16" fill="#2f3d1c"/></g>
+
+<!-- photographic grain -->
+<rect x="0" y="0" width="1000" height="750" filter="url(#grain)" opacity="0.10"/>
+<!-- subtle vignette -->
+<rect x="0" y="0" width="1000" height="750" fill="none" stroke="#000000" stroke-width="60" opacity="0.12"/>
+
+<!-- ===================== SURVEY OVERLAY ===================== -->
+<!-- measurement grid -->
+<rect x="40" y="44" width="920" height="596" fill="url(#meas)" opacity="0.16"/>
+
+<!-- glowing linework -->
+<g filter="url(#glow)" fill="none" stroke="#19c3f5" stroke-width="2">
+  <!-- footprint -->
+  <rect x="160" y="200" width="460" height="340" stroke-width="2.6"/>
+  <!-- solar zone outline -->
+  <rect x="190" y="232" width="176" height="96" stroke-width="1.6" stroke-dasharray="7 4"/>
+  <!-- dimension: width 61.40 -->
+  <path d="M160 176 H620"/><path d="M160 200 V168 M620 200 V168"/>
+  <!-- dimension: depth 45.20 -->
+  <path d="M132 200 V540"/><path d="M160 200 H124 M160 540 H124"/>
+  <!-- solar dim -->
+  <path d="M190 344 H366" stroke-width="1.4"/><path d="M190 328 V348 M366 328 V348" stroke-width="1.4"/>
+  <!-- control point crosshairs -->
+  <g stroke-width="1.6"><circle cx="160" cy="200" r="10"/><path d="M160 184 V216 M144 200 H176"/>
+  <circle cx="620" cy="200" r="10"/><path d="M620 184 V216 M604 200 H636"/>
+  <circle cx="620" cy="540" r="10"/><path d="M620 524 V556 M604 540 H636"/>
+  <circle cx="160" cy="540" r="10"/><path d="M160 524 V556 M144 540 H176"/></g>
+  <!-- leader lines to annotations -->
+  <path d="M512 290 L760 300" stroke-width="1.3"/>
+  <path d="M278 280 L150 360" stroke-width="1.3"/>
+  <!-- scale bar ticks -->
+  <path d="M60 612 H260 M60 606 V618 M160 606 V618 M260 606 V618" stroke-width="1.6"/>
+  <!-- north arrow -->
+  <g transform="translate(910,150)" stroke-width="1.6"><circle r="22"/><path d="M0 -16 L6 8 L0 3 L-6 8 Z" fill="#19c3f5"/></g>
+  <!-- corner brackets -->
+  <path d="M28 60 V28 H60 M940 28 H972 V60 M972 690 V722 H940 M60 722 H28 V690" stroke-width="2.2"/>
+</g>
+
+<!-- defect markers (findings) -->
+<g filter="url(#glow)" fill="none" stroke-width="2">
+  <circle cx="360" cy="470" r="30" stroke="#ffb020" stroke-dasharray="5 4"/>
+  <circle cx="580" cy="232" r="13" stroke="#ff5a52"/>
+</g>
+
+<!-- ===================== LABELS / CHIPS ===================== -->
+<g font-size="12">
+  <!-- dimension labels -->
+  <g><rect x="356" y="160" width="68" height="18" rx="2" fill="#06121f" opacity="0.78"/><text x="390" y="173" fill="#7fe4ff" text-anchor="middle" font-weight="700">61.40 m</text></g>
+  <g transform="rotate(-90 112 370)"><rect x="78" y="361" width="68" height="18" rx="2" fill="#06121f" opacity="0.78"/><text x="112" y="374" fill="#7fe4ff" text-anchor="middle" font-weight="700">45.20 m</text></g>
+  <g><rect x="248" y="350" width="60" height="16" rx="2" fill="#06121f" opacity="0.78"/><text x="278" y="362" fill="#7fe4ff" text-anchor="middle" font-size="10.5" font-weight="700">23.40 m</text></g>
+
+  <!-- control point chips -->
+  <g font-size="9.5" fill="#cdeffb">
+    <rect x="120" y="178" width="116" height="15" rx="2" fill="#06121f" opacity="0.82"/><text x="126" y="189" font-weight="700">CP-01 · E311.4 N982.1</text>
+    <rect x="638" y="178" width="116" height="15" rx="2" fill="#06121f" opacity="0.82"/><text x="644" y="189" font-weight="700">CP-02 · E372.8 N982.0</text>
+    <rect x="638" y="546" width="116" height="15" rx="2" fill="#06121f" opacity="0.82"/><text x="644" y="557" font-weight="700">CP-03 · E372.8 N936.8</text>
+    <rect x="84" y="546" width="116" height="15" rx="2" fill="#06121f" opacity="0.82"/><text x="90" y="557" font-weight="700">CP-04 · E311.4 N936.8</text>
+  </g>
+
+  <!-- feature annotations -->
+  <g>
+    <rect x="760" y="291" width="150" height="34" rx="3" fill="#06121f" opacity="0.82"/><text x="770" y="305" fill="#19c3f5" font-weight="700" font-size="11">HVAC PLANT · 4 units</text><text x="770" y="319" fill="#9fd8ec" font-size="9.5">access survey · clearance OK</text>
+    <rect x="40" y="346" width="118" height="34" rx="3" fill="#06121f" opacity="0.82"/><text x="49" y="360" fill="#19c3f5" font-weight="700" font-size="11">SOLAR ARRAY</text><text x="49" y="374" fill="#9fd8ec" font-size="9.5">384 m² · 21.6 kWp</text>
+  </g>
+
+  <!-- defect callouts -->
+  <g>
+    <rect x="300" y="500" width="120" height="16" rx="2" fill="#3a2600" opacity="0.9"/><text x="360" y="512" fill="#ffc451" text-anchor="middle" font-size="10" font-weight="700">⚠ PONDING 18 m²</text>
+    <rect x="596" y="224" width="116" height="16" rx="2" fill="#3a0d0a" opacity="0.9"/><text x="600" y="236" fill="#ff8e88" font-size="10" font-weight="700">✖ SEAM LIFT — repair</text>
+  </g>
+
+  <!-- area callout -->
+  <g><rect x="372" y="372" width="150" height="40" rx="4" fill="#06121f" opacity="0.85" stroke="#19c3f5" stroke-width="1"/><text x="384" y="390" fill="#19c3f5" font-size="11" font-weight="700" letter-spacing="1">ROOF AREA</text><text x="384" y="406" fill="#ffffff" font-size="15" font-weight="700">2,346 m²</text></g>
+
+  <!-- scale bar label -->
+  <text x="60" y="600" fill="#cdeffb" font-size="9.5" letter-spacing="1">SCALE</text>
+  <g fill="#cdeffb" font-size="9.5" text-anchor="middle"><text x="60" y="634">0</text><text x="160" y="634">10</text><text x="260" y="634">20 m</text></g>
+
+  <!-- coordinate ticks -->
+  <g fill="#7fbdd6" font-size="8.5"><text x="240" y="58">E 320</text><text x="440" y="58">E 340</text><text x="640" y="58">E 360</text><text x="46" y="240">N 980</text><text x="46" y="440">N 960</text></g>
+</g>
+
+<!-- north label -->
+<text x="910" y="124" fill="#19c3f5" font-size="13" font-weight="700" text-anchor="middle">N</text>
+
+<!-- ===================== HUD STRIP ===================== -->
+<rect x="0" y="0" width="1000" height="40" fill="#06121f" opacity="0.92"/>
+<line x1="0" y1="40" x2="1000" y2="40" stroke="#19c3f5" stroke-width="1.5"/>
+<!-- drone glyph -->
+<g transform="translate(26,20)" stroke="#19c3f5" stroke-width="1.8" fill="none" stroke-linecap="round"><rect x="-5" y="-5" width="10" height="10" rx="2" fill="#19c3f5" stroke="none"/><line x1="-5" y1="-5" x2="-14" y2="-14"/><line x1="5" y1="-5" x2="14" y2="-14"/><line x1="-5" y1="5" x2="-14" y2="14"/><line x1="5" y1="5" x2="14" y2="14"/><ellipse cx="-15" cy="-15" rx="6" ry="2.4"/><ellipse cx="15" cy="-15" rx="6" ry="2.4"/><ellipse cx="-15" cy="15" rx="6" ry="2.4"/><ellipse cx="15" cy="15" rx="6" ry="2.4"/></g>
+<text x="52" y="20" fill="#ffffff" font-size="14" font-weight="700" letter-spacing="1">AERIAL SURVEYING</text>
+<text x="52" y="33" fill="#19c3f5" font-size="8.5" letter-spacing="2">UAV ORTHOMOSAIC + CAD OVERLAY</text>
+<text x="984" y="18" fill="#cdeffb" font-size="10" text-anchor="end" font-weight="700">SITE: Maynooth Business Park</text>
+<text x="984" y="32" fill="#7fbdd6" font-size="9" text-anchor="end">CAPTURED 20.06.2026 · ITM GRID</text>
+
+<!-- telemetry chip -->
+<g><rect x="690" y="706" width="310" height="44" fill="#06121f" opacity="0.9"/><line x1="690" y1="706" x2="690" y2="750" stroke="#19c3f5" stroke-width="1.5"/>
+<text x="704" y="724" fill="#19c3f5" font-size="10" font-weight="700">FLIGHT TELEMETRY</text>
+<text x="704" y="740" fill="#9fd8ec" font-size="9.5">ALT 78 m · GSD 12 mm/px · 214 images · DJI Mini 4 Pro</text></g>
+</svg>

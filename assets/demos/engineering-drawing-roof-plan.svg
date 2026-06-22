@@ -1,0 +1,186 @@
+<svg viewBox="0 0 1120 792" xmlns="http://www.w3.org/2000/svg" font-family="'Space Grotesk','Inter','Segoe UI',Arial,sans-serif" role="img" aria-labelledby="ttl dsc">
+<title id="ttl">Aerial Surveying — Roof Plan engineering drawing</title>
+<desc id="dsc">A technical CAD-style roof plan showing a solar PV zone, HVAC plant, roof drains with fall arrows, dimensions in metres, grid axes, north arrow, graphic scale bar, legend, revision table and a branded title block.</desc>
+<defs>
+  <marker id="ah" markerWidth="11" markerHeight="9" refX="9" refY="4" orient="auto"><path d="M0,0 L9,4 L0,8 Z" fill="#0b1f3a"/></marker>
+  <marker id="ahs" markerWidth="9" markerHeight="8" refX="7" refY="3.5" orient="auto"><path d="M0,0 L7,3.5 L0,7 Z" fill="#3b6e93"/></marker>
+  <pattern id="grid" width="19" height="19" patternUnits="userSpaceOnUse"><path d="M19 0 H0 V19" fill="none" stroke="#eef2f6" stroke-width="1"/></pattern>
+  <pattern id="pv" width="27" height="19" patternUnits="userSpaceOnUse"><rect width="27" height="19" fill="#cfe0ef"/><rect x="1.2" y="1.2" width="24.6" height="16.6" fill="#bcd4e8" stroke="#3b6e93" stroke-width="0.9"/><line x1="13.5" y1="1.2" x2="13.5" y2="17.8" stroke="#3b6e93" stroke-width="0.5"/></pattern>
+  <pattern id="seam" width="16" height="16" patternUnits="userSpaceOnUse" patternTransform="rotate(0)"><line x1="0" y1="0" x2="0" y2="16" stroke="#cfd8e2" stroke-width="0.8"/></pattern>
+</defs>
+
+<!-- sheet -->
+<rect x="0" y="0" width="1120" height="792" fill="#ffffff"/>
+<rect x="14" y="14" width="1092" height="764" fill="none" stroke="#0b1f3a" stroke-width="2.5"/>
+<rect x="22" y="22" width="1076" height="748" fill="none" stroke="#0b1f3a" stroke-width="0.8"/>
+
+<!-- ===== DRAWING AREA (left) ===== -->
+<rect x="30" y="40" width="650" height="712" fill="url(#grid)"/>
+<text x="44" y="62" font-size="13" letter-spacing="2" fill="#19c3f5" font-weight="700">ROOF PLAN — SOLAR &amp; PLANT LAYOUT</text>
+<text x="44" y="78" font-size="10" fill="#5b6b7d" letter-spacing="1">SCALE 1:100 @ A3 · ALL DIMENSIONS IN METRES</text>
+
+<!-- grid axis bubbles (top: A B C) -->
+<g font-size="11" font-weight="700" fill="#0b1f3a" text-anchor="middle">
+  <line x1="200" y1="150" x2="200" y2="544" stroke="#9fb0c0" stroke-width="0.7" stroke-dasharray="2 4"/>
+  <line x1="392" y1="150" x2="392" y2="544" stroke="#9fb0c0" stroke-width="0.7" stroke-dasharray="2 4"/>
+  <line x1="584" y1="150" x2="584" y2="544" stroke="#9fb0c0" stroke-width="0.7" stroke-dasharray="2 4"/>
+  <circle cx="200" cy="142" r="11" fill="#fff" stroke="#0b1f3a"/><text x="200" y="146">A</text>
+  <circle cx="392" cy="142" r="11" fill="#fff" stroke="#0b1f3a"/><text x="392" y="146">B</text>
+  <circle cx="584" cy="142" r="11" fill="#fff" stroke="#0b1f3a"/><text x="584" y="146">C</text>
+  <!-- left: 1 2 3 -->
+  <line x1="150" y1="240" x2="584" y2="240" stroke="#9fb0c0" stroke-width="0.7" stroke-dasharray="2 4"/>
+  <line x1="150" y1="392" x2="584" y2="392" stroke="#9fb0c0" stroke-width="0.7" stroke-dasharray="2 4"/>
+  <line x1="150" y1="544" x2="584" y2="544" stroke="#9fb0c0" stroke-width="0.7" stroke-dasharray="2 4"/>
+  <circle cx="138" cy="240" r="11" fill="#fff" stroke="#0b1f3a"/><text x="138" y="244">1</text>
+  <circle cx="138" cy="392" r="11" fill="#fff" stroke="#0b1f3a"/><text x="138" y="396">2</text>
+  <circle cx="138" cy="544" r="11" fill="#fff" stroke="#0b1f3a"/><text x="138" y="548">3</text>
+</g>
+
+<!-- roof membrane fill + parapet -->
+<rect x="200" y="240" width="384" height="304" fill="url(#seam)"/>
+<rect x="200" y="240" width="384" height="304" fill="#f4f8fb" fill-opacity="0.55"/>
+<rect x="200" y="240" width="384" height="304" fill="none" stroke="#0b1f3a" stroke-width="2.4"/>
+<rect x="210" y="250" width="364" height="284" fill="none" stroke="#5b6b7d" stroke-width="1" stroke-dasharray="6 4"/>
+
+<!-- solar PV zone -->
+<rect x="232" y="278" width="208" height="104" fill="url(#pv)" stroke="#1f4e74" stroke-width="1.6"/>
+<text x="336" y="332" font-size="11" font-weight="700" fill="#15405f" text-anchor="middle">SOLAR PV ZONE</text>
+<text x="336" y="346" font-size="9" fill="#15405f" text-anchor="middle">48 modules · 21.6 kWp</text>
+
+<!-- HVAC plant units (3) -->
+<g stroke="#0b1f3a" stroke-width="1.4" fill="#eef2f6">
+  <rect x="470" y="430" width="44" height="38"/><circle cx="492" cy="449" r="13" fill="none"/><path d="M492 449 L500 443 M492 449 L484 455 M492 449 L498 458" stroke="#5b6b7d" stroke-width="1"/>
+  <rect x="470" y="474" width="44" height="38"/><circle cx="492" cy="493" r="13" fill="none"/><path d="M492 493 L500 487 M492 493 L484 499 M492 493 L498 502" stroke="#5b6b7d" stroke-width="1"/>
+  <rect x="520" y="452" width="44" height="38"/><circle cx="542" cy="471" r="13" fill="none"/><path d="M542 471 L550 465 M542 471 L534 477 M542 471 L548 480" stroke="#5b6b7d" stroke-width="1"/>
+</g>
+<text x="516" y="425" font-size="10" font-weight="700" fill="#0b1f3a" text-anchor="middle">HVAC PLANT — 3 No.</text>
+
+<!-- roof access hatch -->
+<rect x="232" y="470" width="30" height="30" fill="#fff" stroke="#0b1f3a" stroke-width="1.4"/><path d="M232 470 L262 500 M262 470 L232 500" stroke="#0b1f3a" stroke-width="0.9"/>
+<text x="247" y="514" font-size="8.5" fill="#0b1f3a" text-anchor="middle">ACCESS</text>
+
+<!-- rooflights -->
+<g fill="#dbe9f4" stroke="#1f4e74" stroke-width="1.1"><rect x="300" y="430" width="22" height="22"/><rect x="332" y="430" width="22" height="22"/><rect x="364" y="430" width="22" height="22"/></g>
+<text x="343" y="468" font-size="8.5" fill="#15405f" text-anchor="middle">ROOFLIGHTS</text>
+
+<!-- roof drains + fall arrows -->
+<g>
+  <circle cx="250" cy="410" r="6" fill="#fff" stroke="#0b1f3a" stroke-width="1.3"/><rect x="244" y="404" width="12" height="12" fill="none" stroke="#0b1f3a" stroke-width="0.8"/>
+  <circle cx="540" cy="300" r="6" fill="#fff" stroke="#0b1f3a" stroke-width="1.3"/><rect x="534" y="294" width="12" height="12" fill="none" stroke="#0b1f3a" stroke-width="0.8"/>
+  <line x1="300" y1="392" x2="262" y2="408" stroke="#19c3f5" stroke-width="1.4" marker-end="url(#ahs)"/>
+  <line x1="500" y1="320" x2="528" y2="304" stroke="#19c3f5" stroke-width="1.4" marker-end="url(#ahs)"/>
+  <text x="320" y="388" font-size="8" fill="#0b7ea6">FALL 1:80</text>
+</g>
+
+<!-- ===== DIMENSIONS ===== -->
+<!-- overall width 24.00 (top) -->
+<g stroke="#0b1f3a" stroke-width="1">
+  <line x1="200" y1="240" x2="200" y2="196"/><line x1="584" y1="240" x2="584" y2="196"/>
+  <line x1="200" y1="200" x2="584" y2="200" marker-start="url(#ah)" marker-end="url(#ah)"/>
+</g>
+<rect x="356" y="190" width="72" height="16" fill="#fff"/><text x="392" y="202" font-size="12" font-weight="700" fill="#0b1f3a" text-anchor="middle">24.00 m</text>
+
+<!-- overall depth 19.00 (left) -->
+<g stroke="#0b1f3a" stroke-width="1">
+  <line x1="200" y1="240" x2="166" y2="240"/><line x1="200" y1="544" x2="166" y2="544"/>
+  <line x1="170" y1="240" x2="170" y2="544" marker-start="url(#ah)" marker-end="url(#ah)"/>
+</g>
+<g transform="rotate(-90 170 392)"><rect x="134" y="384" width="72" height="16" fill="#fff"/><text x="170" y="396" font-size="12" font-weight="700" fill="#0b1f3a" text-anchor="middle">19.00 m</text></g>
+
+<!-- PV zone width 13.00 -->
+<g stroke="#3b6e93" stroke-width="0.9">
+  <line x1="232" y1="382" x2="232" y2="402"/><line x1="440" y1="382" x2="440" y2="402"/>
+  <line x1="232" y1="396" x2="440" y2="396" marker-start="url(#ahs)" marker-end="url(#ahs)"/>
+</g>
+<rect x="306" y="389" width="60" height="14" fill="#fff"/><text x="336" y="400" font-size="10" font-weight="700" fill="#15405f" text-anchor="middle">13.00 m</text>
+
+<!-- setback 1.50 -->
+<g stroke="#3b6e93" stroke-width="0.9"><line x1="200" y1="264" x2="232" y2="264" marker-start="url(#ahs)" marker-end="url(#ahs)"/></g>
+<text x="216" y="259" font-size="8.5" fill="#15405f" text-anchor="middle">1.50</text>
+
+<!-- section marker -->
+<g stroke="#19c3f5" stroke-width="2"><line x1="200" y1="560" x2="584" y2="560"/></g>
+<g fill="#0b1f3a"><circle cx="196" cy="560" r="10" fill="#0b1f3a"/><text x="196" y="564" font-size="10" fill="#fff" text-anchor="middle" font-weight="700">A</text><circle cx="588" cy="560" r="10" fill="#0b1f3a"/><text x="588" y="564" font-size="10" fill="#fff" text-anchor="middle" font-weight="700">A</text></g>
+<text x="392" y="556" font-size="9" fill="#0b7ea6" text-anchor="middle">SECTION A–A</text>
+
+<!-- north arrow -->
+<g transform="translate(626,120)"><circle r="26" fill="#fff" stroke="#0b1f3a" stroke-width="1.4"/><path d="M0,-20 L7,8 L0,1 L-7,8 Z" fill="#0b1f3a"/><path d="M0,-20 L7,8 L0,1 Z" fill="#19c3f5"/><text x="0" y="-28" font-size="12" font-weight="700" fill="#0b1f3a" text-anchor="middle">N</text></g>
+
+<!-- graphic scale bar -->
+<g transform="translate(200,640)">
+  <text x="0" y="-8" font-size="9" fill="#5b6b7d" letter-spacing="1">SCALE 1:100</text>
+  <rect x="0" y="0" width="40" height="9" fill="#0b1f3a"/><rect x="40" y="0" width="40" height="9" fill="#fff" stroke="#0b1f3a" stroke-width="1"/><rect x="80" y="0" width="40" height="9" fill="#0b1f3a"/><rect x="120" y="0" width="40" height="9" fill="#fff" stroke="#0b1f3a" stroke-width="1"/>
+  <g font-size="9" fill="#0b1f3a" text-anchor="middle"><text x="0" y="24">0</text><text x="40" y="24">2.5</text><text x="80" y="24">5</text><text x="160" y="24">10 m</text></g>
+</g>
+
+<!-- ===== RIGHT COLUMN ===== -->
+<!-- revision table -->
+<g font-size="9.5" fill="#0b1f3a">
+  <rect x="696" y="56" width="408" height="96" fill="#fff" stroke="#0b1f3a" stroke-width="1.2"/>
+  <rect x="696" y="56" width="408" height="18" fill="#0b1f3a"/>
+  <text x="704" y="69" fill="#fff" font-weight="700" letter-spacing="1">REVISIONS</text>
+  <line x1="734" y1="74" x2="734" y2="152" stroke="#9fb0c0"/><line x1="800" y1="74" x2="800" y2="152" stroke="#9fb0c0"/><line x1="1040" y1="74" x2="1040" y2="152" stroke="#9fb0c0"/>
+  <g font-weight="700"><text x="703" y="87">REV</text><text x="742" y="87">DATE</text><text x="808" y="87">DESCRIPTION</text><text x="1048" y="87">BY</text></g>
+  <line x1="696" y1="92" x2="1104" y2="92" stroke="#0b1f3a"/>
+  <text x="710" y="107">A</text><text x="742" y="107">02.06.26</text><text x="808" y="107">Issued for review</text><text x="1050" y="107">JM</text>
+  <text x="710" y="124">B</text><text x="742" y="124">11.06.26</text><text x="808" y="124">Plant layout added</text><text x="1050" y="124">JM</text>
+  <text x="710" y="141">C</text><text x="742" y="141">20.06.26</text><text x="808" y="141">Solar zone revised</text><text x="1050" y="141">JM</text>
+</g>
+
+<!-- legend -->
+<g font-size="10.5" fill="#0b1f3a">
+  <rect x="696" y="168" width="408" height="196" fill="#fff" stroke="#0b1f3a" stroke-width="1.2"/>
+  <rect x="696" y="168" width="408" height="18" fill="#0b1f3a"/><text x="704" y="181" fill="#fff" font-weight="700" letter-spacing="1">LEGEND</text>
+  <g transform="translate(712,200)">
+    <rect x="0" y="0" width="26" height="16" fill="url(#pv)" stroke="#1f4e74"/><text x="36" y="12">Solar PV module zone</text>
+    <rect x="0" y="28" width="26" height="16" fill="#eef2f6" stroke="#0b1f3a"/><circle cx="13" cy="36" r="6" fill="none" stroke="#5b6b7d"/><text x="36" y="40">HVAC / mechanical plant</text>
+    <g transform="translate(0,56)"><circle cx="13" cy="8" r="6" fill="#fff" stroke="#0b1f3a"/><rect x="7" y="2" width="12" height="12" fill="none" stroke="#0b1f3a" stroke-width="0.8"/><text x="36" y="12">Roof drain / rainwater outlet</text></g>
+    <g transform="translate(0,84)"><rect x="0" y="0" width="16" height="16" fill="#fff" stroke="#0b1f3a"/><path d="M0 0 L16 16 M16 0 L0 16" stroke="#0b1f3a" stroke-width="0.8"/><text x="36" y="12">Roof access hatch</text></g>
+    <g transform="translate(0,112)"><line x1="0" y1="8" x2="26" y2="8" stroke="#19c3f5" stroke-width="1.6" marker-end="url(#ahs)"/><text x="36" y="12">Direction of fall</text></g>
+    <g transform="translate(0,140)"><line x1="0" y1="8" x2="26" y2="8" stroke="#0b1f3a" stroke-width="1" marker-start="url(#ah)" marker-end="url(#ah)"/><text x="36" y="12">Dimension (metres)</text></g>
+  </g>
+</g>
+
+<!-- survey notes -->
+<g font-size="10" fill="#0b1f3a">
+  <rect x="696" y="380" width="408" height="216" fill="#fff" stroke="#0b1f3a" stroke-width="1.2"/>
+  <rect x="696" y="380" width="408" height="18" fill="#0b1f3a"/><text x="704" y="393" fill="#fff" font-weight="700" letter-spacing="1">SURVEY NOTES</text>
+  <g fill="#27384a" font-size="10">
+    <text x="708" y="416">1.  Survey method: UAV aerial photogrammetry.</text>
+    <text x="708" y="434">2.  Platform: DJI Mini 4 Pro · GSD ≈ 12 mm/px.</text>
+    <text x="708" y="452">3.  Horizontal datum: Irish Transverse Mercator (ITM).</text>
+    <text x="708" y="470">4.  Levels to Ordnance Datum Malin Head.</text>
+    <text x="708" y="488">5.  All dimensions in metres unless noted. Do not scale.</text>
+    <text x="708" y="506">6.  Verify all critical dims on site before fabrication.</text>
+    <text x="708" y="524">7.  Plant positions indicative — confirm with M&amp;E.</text>
+    <text x="708" y="542">8.  Flight conducted under IAA SUA registration.</text>
+    <text x="708" y="566" fill="#0b7ea6" font-weight="700">© Aerial Surveying — issued for the named project only.</text>
+  </g>
+</g>
+
+<!-- ===== TITLE BLOCK ===== -->
+<g>
+  <rect x="696" y="612" width="408" height="164" fill="#0b1f3a"/>
+  <rect x="696" y="612" width="408" height="164" fill="none" stroke="#0b1f3a" stroke-width="1.2"/>
+  <!-- drone glyph -->
+  <g transform="translate(726,648)" stroke="#19c3f5" stroke-width="2" fill="none" stroke-linecap="round">
+    <rect x="-7" y="-7" width="14" height="14" rx="3" fill="#19c3f5" stroke="none"/>
+    <line x1="-7" y1="-7" x2="-20" y2="-20"/><line x1="7" y1="-7" x2="20" y2="-20"/><line x1="-7" y1="7" x2="-20" y2="20"/><line x1="7" y1="7" x2="20" y2="20"/>
+    <ellipse cx="-22" cy="-22" rx="9" ry="3.4"/><ellipse cx="22" cy="-22" rx="9" ry="3.4"/><ellipse cx="-22" cy="22" rx="9" ry="3.4"/><ellipse cx="22" cy="22" rx="9" ry="3.4"/>
+  </g>
+  <text x="762" y="642" font-size="22" font-weight="700" fill="#ffffff" letter-spacing="1">AERIAL SURVEYING</text>
+  <text x="763" y="660" font-size="9.5" fill="#19c3f5" letter-spacing="3">UAV SURVEY &amp; INSPECTION · IRELAND</text>
+  <line x1="708" y1="672" x2="1092" y2="672" stroke="#1d3a5c"/>
+  <g font-size="9" fill="#9fb6cc">
+    <text x="708" y="690">CLIENT</text><text x="708" y="704" font-size="11" fill="#fff" font-weight="700">Meridian Roofing &amp; Solar Ltd</text>
+    <text x="708" y="724">PROJECT</text><text x="708" y="738" font-size="11" fill="#fff" font-weight="700">Unit 4, Maynooth Business Park</text>
+    <line x1="900" y1="678" x2="900" y2="770" stroke="#1d3a5c"/>
+    <text x="912" y="690">DRG No.</text><text x="912" y="703" font-size="11" fill="#fff" font-weight="700">AS-RP-014</text>
+    <text x="912" y="722">SCALE</text><text x="912" y="735" font-size="11" fill="#fff" font-weight="700">1:100 @ A3</text>
+    <text x="1010" y="690">REV</text><text x="1010" y="703" font-size="11" fill="#19c3f5" font-weight="700">C</text>
+    <text x="1010" y="722">DATE</text><text x="1010" y="735" font-size="11" fill="#fff" font-weight="700">20.06.26</text>
+  </g>
+  <line x1="708" y1="748" x2="1092" y2="748" stroke="#1d3a5c"/>
+  <text x="708" y="764" font-size="9" fill="#9fb6cc">aerialsurveying.ie · 089 481 3390 · IAA-compliant · Fully insured · 24–48 hr turnaround</text>
+</g>
+</svg>

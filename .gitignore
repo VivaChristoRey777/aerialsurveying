@@ -19,3 +19,12 @@
 
 # Netlify CLI deploy artifacts
 deploy-*.zip
+
+# heavy source photos (not deployed)
+assets/gallery/originals/
+assets/progress/originals/
+.DS_Store
+*.textClipping
+assets/video/_parts/
+*.mov
+_site/
